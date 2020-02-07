@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Tarea1.LoginPage">
+
+    <ScrollView>
+        
+        <StackLayout x:Name="Layout">
+
+            <StackLayout x:Name="TabsStack"
+                         Orientation="Horizontal">
+
+                <Label x:Name="LoginLabel"
+                       Text="Login"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="50"
+                       Margin="30,35,20,10"/>
+
+                <Label x:Name="SignUpLabel"
+                       Text="Sign Up"
+                       TextColor="LightGray"
+                       FontAttributes="Bold"
+                       FontSize="25"
+                       Margin="40,55,40,10"
+                       HorizontalOptions="EndAndExpand"/>
+
+            </StackLayout>
+
+            <Image x:Name="LoginIcon" Source="user.png"
+                   HeightRequest="{OnPlatform iOS=250, Android=200}"
+                   WidthRequest="{OnPlatform iOS=250, Android=200}"/>
+
+            <Entry x:Name="Entry_Username"
+                   Placeholder="Username or email address"
+                   Margin="55,0,55,0"/>
+
+            <Entry x:Name="Entry_Password"
+                   Placeholder="Password"
+                   Margin="55,0,55,0"/>
+
+            <Image x:Name="Config" Source="setting.png"
+                   HorizontalOptions="EndAndExpand"
+                   HeightRequest="{OnPlatform iOS=50, Android=40}"
+                   WidthRequest="{OnPlatform iOS=50, Android=40}"
+                   Margin="0,0,55,0"/>
+
+            <Button x:Name="Btn_Login" Text="LOG IN"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Margin="55,0,55,0"/>
+
+            <Label Text="Login with"
+                   HorizontalOptions="Center"
+                   Padding="0,10,0,10"/>
+
+            <StackLayout x:Name="LoginIconStack"
+                         Orientation="Horizontal"
+                         HeightRequest="{OnPlatform iOS=80, Android=60}"
+                         WidthRequest="{OnPlatform iOS=80, Android=60}"
+                         Margin="80,0,0,0">
+
+                <Image x:Name="GoogleIcon" Source="google.png"/>
+                <Image x:Name="GitHubIcon" Source="github.png"/>
+                <Image x:Name="TwitterIcon" Source="twitter.png"/>
+                <Image x:Name="FacebookIcon" Source="facebook.png"/>
+
+            </StackLayout>
+
+        </StackLayout>
+        
+    </ScrollView>
+    
+</ContentPage>

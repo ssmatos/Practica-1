@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Tarea1.SignUpPage">
+
+    <ScrollView>
+
+        <StackLayout x:Name="MasterLayout">
+
+            <StackLayout x:Name="TabsStack"
+                         Orientation="Horizontal">
+
+                <Label x:Name="SignUpLabel"
+                       Text="Sign Up"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="50"
+                       Margin="30,35,20,10"/>
+
+                <Label x:Name="LoginLabel"
+                       Text="Login"
+                       TextColor="LightGray"
+                       FontAttributes="Bold"
+                       FontSize="25"
+                       Margin="40,55,40,10"
+                       HorizontalOptions="EndAndExpand"/>
+
+            </StackLayout>
+
+            <Image x:Name="SignUpIcon" Source="camera.png"
+                   HeightRequest="{OnPlatform iOS=250, Android=200}"
+                   WidthRequest="{OnPlatform iOS=250, Android=200}"/>
+
+            <Entry x:Name="Entry_Email" Placeholder="Email address" Margin="55,0,55,0"/>
+
+            <Entry x:Name="Entry_Username" Placeholder="Username" Margin="55,0,55,0"/>
+
+            <Entry x:Name="Entry_Password" Placeholder="Password" Margin="55,0,55,0"/>
+
+            <Entry x:Name="Entry_RepeatPassword" Placeholder="Repeat Password" Margin="55,0,55,0"/>
+
+            <Button x:Name="Btn_SignUp" Text="SIGN UP"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Margin="55,20,55,0"/>
+
+            <Label Text="Terms of Service" HorizontalOptions="Center"
+                   Padding="0,10,0,10"/>
+
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>
